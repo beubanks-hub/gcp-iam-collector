@@ -39,7 +39,7 @@ def render(nodes, edges, output_name):
 
 def color_for_role(role, all_roles):
     hue = float(all_roles.index(role)) / len(all_roles)
-    return '#%02x%02x%02x' % tuple(c * 255 for c in colorsys.hsv_to_rgb(hue, 1, 0.85))
+    return '#%02x%02x%02x' % tuple(int(c) * 255 for c in colorsys.hsv_to_rgb(hue, 1, 0.85))
 
 
 def sanitise_role(role):
