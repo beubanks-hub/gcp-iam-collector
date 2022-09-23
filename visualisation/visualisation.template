@@ -152,7 +152,7 @@
 <body onload="draw()">
 
 <p>Types:
-{% for key, value in type_properties.iteritems() %}
+{% for key, value in type_properties.items() %}
     <input
      {% if key in default_filters %}
      checked="true"
@@ -164,7 +164,7 @@
 </p>
 <p>
 Role types:
-{% for key, value in all_roles.iteritems() %}
+{% for key, value in all_roles.items() %}
     <input checked="true" type="checkbox" onclick="filterByEdgeType('{{ key }}')">
     <span style="color: {{value}}">{{ key }}</span></input>
 {% endfor %}
