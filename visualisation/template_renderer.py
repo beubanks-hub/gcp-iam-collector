@@ -2,7 +2,7 @@ import colorsys
 import json
 
 from jinja2 import Environment, PackageLoader
-import graph
+from visualisation import graph
 
 
 def create_html(nodes_string, edges_string, role_color_map, output_name):
@@ -23,7 +23,7 @@ def get_description(node):
     if node.title:
         desc = desc + node.title + "</br>"
     if node.properties:
-        for k, v in node.properties.iteritems():
+        for k, v in node.properties.items():
             desc = desc + k + ": " + str(v) + "<br/>"
     return desc
 
